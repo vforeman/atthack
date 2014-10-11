@@ -1,9 +1,320 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>profilehome</title>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example that shows off a responsive product landing page.">
+
+    <title>mentor matching &ndash; </title>
+
+<!-- JQUERY -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<!-- YAHOO PURE CSS -->
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+
+
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+<!--<![endif]-->
+
+
+  
+
+        <link rel="stylesheet" href="css/layouts/profile.css">
+ 
+  
+
+
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+
+    
+
+    
+
+    
+
+
 </head>
 <body>
-sup
+<style type="text/css">
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+body {
+  background:#485b6e;
+}
+
+.container {
+  max-width:500px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:5%;
+}
+
+h1 {
+  font-family: "Open Sans", sans;
+  font-weight:300;
+  text-align:center;
+  color:rgba(255,255,255,0.6)
+}
+
+h2 {
+  color:#2c3e52;
+  font-family:  "Open Sans", sans;
+  font-size: 14px;
+  text-align:center;
+  font-weight:700;
+  margin-bottom:50px;
+  
+}
+
+.service-details {
+	/*width: 460px;*/
+	height: 250px;	
+	/*height: 230px;*/
+	overflow: hidden;
+	position: relative;
+}
+
+.service-details img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: inherit;
+	width: auto;
+	height: 100%;
+	float: left;
+	transition: all 0.8s;
+	-moz-transition: all 0.8s;
+
+}
+
+.service-details:hover img {
+	/*opacity: 0.4 !important;*/
+}
+
+.service-details .service-hover-text h3 {
+	padding: 0px;
+	margin: 0px;
+	font-size: 20px;
+  font-weight:300;
+	font-family: "Open Sans";
+}
+
+.service-details .service-hover-text h4 {
+	padding: 0px;
+	padding-bottom: 13px;
+	margin: 0px;
+	font-size: 14px;
+  letter-spacing: 3px;
+	width: 90%;
+	font-family: "Open Sans";
+  text-transform:uppercase;
+	border-bottom: 2px solid #000;
+}
+
+.service-details .service-hover-text p {
+	padding-top: 13px;
+	font-size: 14px;
+	line-height: 20px;
+	font-family: "Open Sans";
+}
+
+
+.service-details .service-hover-text{
+	width: 42%;
+	height: 89%;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	padding: 3% 4%;
+	background: #D90E0E;
+	color: rgba(255,255,255,1);
+/*	display: none;*/
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.4s;
+}
+
+.service-details:hover .service-hover-text {
+	display: block !important;
+	color: rgba(255,255,255,1);
+	background:rgba(217,14,14,0.85);
+	left: 0px;
+	top: 0px;
+}
+
+
+.service-details .service-text {
+	width: 50%;
+	height: inherit;
+	background: #000;
+	float: left;
+	position: absolute;
+	left: 50%;
+}
+
+.service-details .service-text p {
+	padding:100px 0px 0px 20px;
+	font-size: 24px;
+	font-family: "Open Sans";
+  font-weight:700;
+	color: #fff;
+}
+
+.service-details .service-text p span {
+	font-family: "Open Sans" !important;
+}
+
+.service-details .service-text a , .service-white .service-text {
+	padding: 0px 0px 0px 20px;
+	font-size: 14px !important;
+	color:#FF5A22 !important;
+	font-family: "Open Sans" !important;
+	text-decoration: none !important; 
+}
+
+.service-details .service-text {
+	float: left;
+} 
+
+.service-white {
+	background: #eee !important;
+	width: 50% !important;
+	height: inherit !important;
+}
+
+.service-white p {
+	color: #000 !important;
+}
+</style>
+<div class="container">
+  <h1><b>MENTOR MATCHES<b></h1>
+  <h2>Select the mentors you would like to chat with</h2>
+  <div class="service-details">
+    <img src="https://cdn.evbuc.com/eventlogos/15418739/allisonmorgan.png" alt="realm">
+    <div class="service-hover-text">
+ 	  <h3>Dr. Allison J. Morgan<h3/>
+      <h4>Professor</h4>
+      <p>An assistant professor of Information Systems and Decision Sciences. </p>
+    </div>
+    <div class="service-white service-text">
+      <p>Dr. Allison J. Morgan</p>
+      <input type="checkbox" id="cbtest" />
+    <label for="cbtest" class="check-box"></label>
+    </div>
+  </div>
+
+  <h2></h2>
+  <div class="service-details">
+    <img src="https://cdn.evbuc.com/eventlogos/15418739/13069421371535170n5b25d.jpg" alt="realm">
+    <div class="service-hover-text">
+      <h3>Dr. Legand Burge III</h3>
+      <h4>Department Chair</h4>
+      <p>Develops and deploys large scale distributed systems and is a strong advocate for student entrepreneurship and innovation. </p>
+    </div>
+    <div class="service-white service-text">
+      <p>Dr. Legand Burge III</p>
+      <input type="checkbox" id="cbtest" />
+    <label for="cbtest" class="check-box"></label>
+    </div>
+  </div>
+
+  <h2></h2>
+  <div class="service-details">
+    <img src="https://cdn.evbuc.com/eventlogos/15418739/lynncooper.jpg" alt="realm">
+    <div class="service-hover-text">
+      <h3>Lynn Cooper</h3>
+      <h4>Entrepreneur</h4>
+      <p>Specializes in training,coaching and developing effective digital strategies for academic, government, corporate and nonprofit entities. </p>
+    </div>
+    <div class="service-white service-text">
+      <p>Lynn Cooper</p>
+      <input type="checkbox" id="cbtest" />
+    <label for="cbtest" class="check-box"></label>
+    </div>
+   </div>
+
+    <h2></h2>
+  <div class="service-details">
+    <img src="https://cdn.evbuc.com/eventlogos/15418739/grantmwarner.png" alt="realm">
+    <div class="service-hover-text">
+      <h3>Grant M. Warner, Ph.D.</h3>
+      <h4>Director</h4>
+      <p>The Director of Innovation and Entrepreneurship at Howard University and the Managing director at HowU Innovate Lab </p>
+    </div>
+    <div class="service-white service-text">
+      <p>Grant M. Warner, Ph.D.</p>
+      <input type="checkbox" id="cbtest" />
+    <label for="cbtest" class="check-box"></label>
+    </div>
+   </div>
+
+ <h2></h2>
+  <div class="service-details">
+    <img src="https://cdn.evbuc.com/eventlogos/15418739/laurenburton.jpg" alt="realm">
+    <div class="service-hover-text">
+      <h3>Lauren Burton</h3>
+      <h4>Developer</h4>
+      <p>Passionate about using technology for change and innovation. </p>
+    </div>
+    <div class="service-white service-text">
+      <p>Lauren Burton</p>
+      <input type="checkbox" id="cbtest" />
+    <label for="cbtest" class="check-box"></label>
+    </div>
+   </div>
+
+    <h2></h2>
+  <div class="service-details">
+    <img src="https://cdn.evbuc.com/eventlogos/15418739/dereklloyd.png" alt="realm">
+    <div class="service-hover-text">
+      <h3>Derek Lloyd </h3>
+      <h4>CTO consultent</h4>
+      <p>Has served as Technical Moderator for Congresswoman Eddie-Bernice Johnson of Texas and is on the Board of the Malcolm X Dr. Betty Shabazz Education Center.  </p>
+    </div>
+    <div class="service-white service-text">
+      <p>Derek Lloyd</p>
+      <input type="checkbox" id="cbtest" />
+    <label for="cbtest" class="check-box"></label>
+    </div>
+   </div>
+
+    <h2></h2>
+  <div class="service-details">
+    <img src="https://cdn.evbuc.com/eventlogos/15418739/juliediazasper.jpg" alt="realm">
+    <div class="service-hover-text">
+      <h3>Julie Diaz-Asper</h3>
+      <h4>Entrepreneur</h4>
+      <p>Has spent more than two decades helping large organizations including American Express, Booz Allen and AARP innovate and pursue new market opportunities. </p>
+    </div>
+    <div class="service-white service-text">
+      <p>Julie Diaz-Asper</p>
+      <input type="checkbox" id="cbtest" />
+    <label for="cbtest" class="check-box"></label>
+    </div>
+   </div>
+
+    <h2></h2>
+  <div class="service-details">
+    <img src="https://cdn.evbuc.com/eventlogos/15418739/jakebienko.png" alt="realm">
+    <div class="service-hover-text">
+      <h3>John J. Bienko</h3>
+      <h4>Director</h4>
+      <p>Serves as an advocate for entrepreneurial development through a variety of management and technical assistance programs and services designed for small business success.</p>
+    </div>
+    <div class="service-white service-text">
+      <p>John J. Bienko</p>
+      <input type="checkbox" id="cbtest" />
+    <label for="cbtest" class="check-box"></label>
+    </div>
+   </div>
+</div>
+
+
 </body>
 </html>
