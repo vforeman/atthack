@@ -84,11 +84,7 @@ app.get('/profilehome',function(req,res){
 });
 
 app.post('/mentor', function(req,res){
-	var newMentor = new mentor({ firstName: req.body.firstname, lastName: req.body.lastname });
- 	newMentor.save(function(err){
- 		this.savelog();
- 	});
- //    newMentor.save(function(err, entry) {
+	 //    newMentor.save(function(err, entry) {
  //  if(err) {
  //    console.log(err);
  //    res.send(500, { error: err.toString()});
@@ -96,8 +92,8 @@ app.post('/mentor', function(req,res){
  //  else {
  //    console.log('New product has been posted.');        
  //  }
- console.log(newMentor);
- res.redirect('/mentor');
+ // console.log(newMentor);
+ res.redirect('/profilehome');
 // });
 });
 
