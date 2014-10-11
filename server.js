@@ -21,7 +21,10 @@ app.get('/parent',function(req,res){
 });
 app.post('/signin',function(req,res){
 	console.log(req.body.name);
-	res.redirect('public/profilehome');
+	res.redirect('/profilehome');
+});
+app.get('/profilehome',function(req,res){
+	res.sendfile('public/profilehome.html');
 });
 
 /*LISTEN*/
