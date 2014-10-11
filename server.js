@@ -31,14 +31,15 @@ app.listen(5000,function(){
 //load the module
 var mongoose = require('mongoose/');
 //connect to the database
-//mongoose.connect('mongodb://54.172.65.28:27017/testone');
+//mongoose.connect('mongodb://54.172.65.28:27017/mentorUS');
 //create schema and create module
 // var Schema = mongoose.Schema;
 // var UserDetail = new Schema({
 // 		username: String,
 // 		password: String
 // 	},	{
-// 		collection: 'userInfo'
+// 		collection: ‘mentor’
+//		collection: ‘guardian’
 // 	});
 // var UserDetails = mongoose.model('userInfo', UserDetail);
 
