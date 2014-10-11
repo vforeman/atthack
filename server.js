@@ -4,6 +4,22 @@ var express = require('express'),
 	app = express(),
 	bodyParser = require('body-parser');
 
+/*MONGODB AND MONGOOSEJS*/
+
+//load the module
+var mongoose = require('mongoose/');
+// mongoose.connect('mongodb://54.172.65.28:27017/mentorUS');
+// var Schema = mongoose.Schema;
+// var UserDetails = new Schema({
+// 	firstName:	String,
+// 	lastName: String,
+// 	eMail: String
+// 	},	{
+
+// 	});
+
+
+
 app.use(bodyParser());
 app.use(express.static(__dirname+'/public'));
 /*ROUTES*/
@@ -34,20 +50,4 @@ app.listen(5000,function(){
 
 
 
-/*MONGODB AND MONGOOSEJS*/
-
-//load the module
-var mongoose = require('mongoose/');
-//connect to the database
-//mongoose.connect('mongodb://54.172.65.28:27017/mentorUS');
-//create schema and create module
-// var Schema = mongoose.Schema;
-// var UserDetail = new Schema({
-// 		username: String,
-// 		password: String
-// 	},	{
-// 		collection: ‘mentor’
-//		collection: ‘guardian’
-// 	});
-// var UserDetails = mongoose.model('userInfo', UserDetail);
 
