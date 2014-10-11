@@ -1,12 +1,38 @@
+//c2-54-172-65-28.compute-1.amazonaws.com
+
 var express = require('express'),
 	app = express();
 
 app.use(express.static(__dirname+'/public'));
+
+/*ROUTES*/
 app.get('/',function(req,res){
 	res.sendfile('index.html');
 });
+app.get('/signin',function(req,res){
+	res.sendfile('public/signin.html');
+});
 
+/*LISTEN*/
 app.listen(5000,function(){
 	console.log('listening on port 5000');
 });
+
+
+
+/*MONGODB AND MONGOOSEJS*/
+
+//load the module
+var mongoose = require('mongoose/');
+//connect to the database
+mongoose.connect('mongodb://54.172.65.28:27017/testone');
+//create schema and create module
+// var Schema = mongoose.Schema;
+// var UserDetail = new Schema({
+// 		username: String,
+// 		password: String
+// 	},	{
+// 		collection: 'userInfo'
+// 	});
+// var UserDetails = mongoose.model('userInfo', UserDetail);
 

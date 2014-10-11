@@ -5,26 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A layout example that shows off a responsive product landing page.">
 
-    <title>Landing Page &ndash; </title>
+    <title>mentor matching &ndash; </title>
 
-    
+<!-- JQUERY -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
-
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure//pure.css">
-
+<!-- YAHOO PURE CSS -->
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 
 
 <!--[if lte IE 8]>
-  
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive-old-ie.css">
-  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
 <![endif]-->
 <!--[if gt IE 8]><!-->
-  
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure//grids-responsive.css">
-  
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
 <!--<![endif]-->
-
 
 
   
@@ -60,12 +55,12 @@
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Your Site</a>
+        <a class="pure-menu-heading" href="">Mentor Matching</a>
 
         <ul>
-            <li class="pure-menu-selected"><a href="#">Home</a></li>
-            <li><a href="#">Tour</a></li>
-            <li><a href="#">Sign Up</a></li>
+            <li id ='header-home' class="pure-menu-selected"><a href="/">Home</a></li>
+            <li id='header-tour' ><a href="#tour">Tour</a></li>
+            <li id='header-signin' ><a href="/public/signin">Sign Up or Log In</a></li>
         </ul>
     </div>
 </div>
@@ -77,7 +72,9 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </p>
         <p>
-            <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
+            <a href="http://purecss.io" class="pure-button pure-button-primary">Parents<br>Get Started</a>
+        
+            <a href="http://purecss.io" class="pure-button pure-button-primary">Mentors<br>Get Started</a>
         </p>
     </div>
 </div>
@@ -198,4 +195,5 @@
 
 
 </body>
+<script type="text/javascript" src="/js/boot.js"></script>
 </html>
