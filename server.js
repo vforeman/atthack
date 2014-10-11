@@ -1,10 +1,11 @@
 //ec2-54-172-65-28.compute-1.amazonaws.com
 
 var express = require('express'),
-	app = express();
+	app = express(),
+	bodyParser = require('body-parser');
 
+app.use(bodyParser());
 app.use(express.static(__dirname+'/public'));
-
 /*ROUTES*/
 app.get('/',function(req,res){
 	res.sendfile('index.html');
@@ -17,6 +18,10 @@ app.get('/mentor',function(req,res){
 });
 app.get('/parent',function(req,res){
 	res.sendfile('public/parent.html');
+});
+app.post('/signin',function(req,res){
+	console.log(req.body.name);
+	res.redirect('public/profilehome');
 });
 
 /*LISTEN*/
