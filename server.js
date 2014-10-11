@@ -1,4 +1,4 @@
-//c2-54-172-65-28.compute-1.amazonaws.com
+//ec2-54-172-65-28.compute-1.amazonaws.com
 
 var express = require('express'),
 	app = express();
@@ -31,7 +31,7 @@ app.listen(5000,function(){
 //load the module
 var mongoose = require('mongoose/');
 //connect to the database
-mongoose.connect('mongodb://54.172.65.28:27017/testone');
+//mongoose.connect('mongodb://54.172.65.28:27017/testone');
 //create schema and create module
 // var Schema = mongoose.Schema;
 // var UserDetail = new Schema({
