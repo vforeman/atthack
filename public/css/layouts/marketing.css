@@ -141,8 +141,8 @@ a.pure-button-primary {
     top: 0;
     left: 0;
     position: fixed !important;
-        background-image: url('/img/mentorbanner.jpg');
-        background-position: center;
+       /* background-image: url('/img/mentorbanner.jpg');
+        background-position: center;*/
 
 }
 
