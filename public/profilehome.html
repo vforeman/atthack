@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
+
+    <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A layout example that shows off a responsive product landing page.">
 
-    <title>mentor matching &ndash; </title>
+    <title>signin &ndash; </title>
 
 <!-- JQUERY -->
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -25,6 +26,9 @@
   
 
         <link rel="stylesheet" href="css/layouts/profile.css">
+ 
+  
+        <link rel="stylesheet" href="css/layouts/marketing.css">
  
   
 
@@ -108,18 +112,17 @@ h2 {
 
 .service-details .service-hover-text h4 {
 	padding: 0px;
-	padding-bottom: 13px;
+	padding-bottom: 0px;
 	margin: 0px;
 	font-size: 14px;
   letter-spacing: 3px;
 	width: 90%;
 	font-family: "Open Sans";
   text-transform:uppercase;
-	border-bottom: 2px solid #000;
 }
 
 .service-details .service-hover-text p {
-	padding-top: 13px;
+	padding-top: 0px;
 	font-size: 14px;
 	line-height: 20px;
 	font-family: "Open Sans";
@@ -192,9 +195,53 @@ h2 {
 	color: #000 !important;
 }
 </style>
-<div class="container">
-  <h1><b>MENTOR MATCHES<b></h1>
-  <h2>Select the mentors you would like to chat with</h2>
+
+
+
+<!-- the client id needs to be change programatically -->
+<script type="text/javascript" src="https://www.moxtra.com/api/js/moxtra-latest.js" id="moxtrajs" data-client-id="CLIENT-ID"></script>   
+<!-- Required JavaScript libraries to create the signature for unique ID based authentication -->
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha256.js"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="/"><img style='max-height:50px;' class ='pure-img-responsive'id='logo' src="/img/logo.png"></a>
+
+        <ul>
+            <li id ='header-home' class="pure-menu-selected"><a href="/">Home</a></li>
+            <li id='header-signin' ><a href="/signin">Log In</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container">
+    <div class="splash">
+        <h1 class="splash-head">Dashboard</h1>
+        <p class="splash-subhead">
+            Manage your connections here
+        </p>
+    </div>
+</div>
+
+<div class="content-wrapper">
+
+       
+    <div class="content">
+        <h2 class="content-head is-center"><h1><b>MENTOR MATCHES<b></h1>
+  <h2>Select the mentors you would like to chat with</h2></h2>
+
+       <div class="container">
+  
   <div class="service-details">
     <img src="https://cdn.evbuc.com/eventlogos/15418739/allisonmorgan.png" alt="realm">
     <div class="service-hover-text">
@@ -213,12 +260,12 @@ h2 {
   <div class="service-details">
     <img src="https://cdn.evbuc.com/eventlogos/15418739/13069421371535170n5b25d.jpg" alt="realm">
     <div class="service-hover-text">
-      <h3>Dr. Legand Burge III</h3>
-      <h4>Department Chair</h4>
+      <h3>Dr. Legand Burge </h3>
+      <h4>Dept Chair</h4>
       <p>Develops and deploys large scale distributed systems and is a strong advocate for student entrepreneurship and innovation. </p>
     </div>
     <div class="service-white service-text">
-      <p>Dr. Legand Burge III</p>
+      <p>Dr. Legand Burge </p>
       <input type="checkbox" id="cbtest" />
     <label for="cbtest" class="check-box"></label>
     </div>
@@ -313,8 +360,21 @@ h2 {
     <label for="cbtest" class="check-box"></label>
     </div>
    </div>
+</div> 
+
+    </div>
+
+    <div class="footer l-box is-center">
+        View the source of this layout to learn more. Made with love by the YUI Team.
+    </div>
+
 </div>
 
 
+
+
+
+
 </body>
+<script type="text/javascript" src="/js/boot.js"></script>
 </html>
