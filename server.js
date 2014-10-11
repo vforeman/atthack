@@ -12,6 +12,12 @@ app.get('/',function(req,res){
 app.get('/signin',function(req,res){
 	res.sendfile('public/signin.html');
 });
+app.get('/mentor',function(req,res){
+	res.sendfile('public/mentor.html');
+});
+app.get('/parent',function(req,res){
+	res.sendfile('public/parent.html');
+});
 
 /*LISTEN*/
 app.listen(5000,function(){
